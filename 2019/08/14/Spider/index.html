@@ -4,7 +4,7 @@
 
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="generator" content="Hexo 3.9.0">
@@ -48,27 +48,27 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
     }
   };
 </script>
 
   <meta name="description" content="这两天在等实验室服务器上跑的代码的结果，闲来无事，简单学习了一下爬虫的相关知识，最后成功爬取了好基友的dota2比赛数据。 运行环境Anaconda Python3.6 基础爬虫由于之前完全没有接触过爬虫，入门就主要参考了这位博主的爬取糗事百科的教程。爬虫主要依赖的库有urllib,urllib2,requests。 P.S.  博主使用的是Pyton2.7，而在Python3中,已经将urlli">
-<meta name="keywords" content="Python">
+<meta name="keywords" content="Python,爬虫">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python爬虫爬取Dotamax数据">
 <meta property="og:url" content="http://yoursite.com/2019/08/14/Spider/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="yajha">
 <meta property="og:description" content="这两天在等实验室服务器上跑的代码的结果，闲来无事，简单学习了一下爬虫的相关知识，最后成功爬取了好基友的dota2比赛数据。 运行环境Anaconda Python3.6 基础爬虫由于之前完全没有接触过爬虫，入门就主要参考了这位博主的爬取糗事百科的教程。爬虫主要依赖的库有urllib,urllib2,requests。 P.S.  博主使用的是Pyton2.7，而在Python3中,已经将urlli">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/1.png">
-<meta property="og:updated_time" content="2019-08-14T12:09:34.801Z">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/images/2019-08-15_1.png">
+<meta property="og:updated_time" content="2019-08-15T08:35:55.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python爬虫爬取Dotamax数据">
 <meta name="twitter:description" content="这两天在等实验室服务器上跑的代码的结果，闲来无事，简单学习了一下爬虫的相关知识，最后成功爬取了好基友的dota2比赛数据。 运行环境Anaconda Python3.6 基础爬虫由于之前完全没有接触过爬虫，入门就主要参考了这位博主的爬取糗事百科的教程。爬虫主要依赖的库有urllib,urllib2,requests。 P.S.  博主使用的是Pyton2.7，而在Python3中,已经将urlli">
-<meta name="twitter:image" content="http://yoursite.com/images/1.png">
+<meta name="twitter:image" content="http://yoursite.com/images/2019-08-15_1.png">
   <link rel="canonical" href="http://yoursite.com/2019/08/14/Spider/">
 
 
@@ -83,7 +83,7 @@
   };
 </script>
 
-  <title>Python爬虫爬取Dotamax数据 | Hexo</title>
+  <title>Python爬虫爬取Dotamax数据 | yajha</title>
   
 
 
@@ -120,7 +120,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   <div class="container sidebar-position-left">
     <div class="headband"></div>
@@ -132,14 +132,14 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">yajha</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -159,7 +159,29 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
       
@@ -170,7 +192,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
   </ul>
@@ -201,13 +223,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/Spider/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="yajha">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="yajha">
     </span>
       <header class="post-header">
 
@@ -223,18 +245,39 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="Created: 2019-08-14 16:25:48 / Modified: 20:09:34" itemprop="dateCreated datePublished" datetime="2019-08-14T16:25:48+08:00">2019-08-14</time>
+              <time title="创建时间：2019-08-14 16:25:48" itemprop="dateCreated datePublished" datetime="2019-08-14T16:25:48+08:00">2019-08-14</time>
             </span>
           
             
 
             
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-15 16:35:55" itemprop="dateModified" datetime="2019-08-15T16:35:55+08:00">2019-08-15</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -261,11 +304,11 @@
 <li><p>对网页内容进行审查，寻找需要提取的数据；</p>
 </li>
 <li><p>正则表达式的应用。</p>
-</li>
-</ol>
 <p>​    .*?        任意非贪婪匹配</p>
 <p>​    (.*?)      需要匹配的分组        </p>
 <p>​    例如，我这里的三个分组就设置为对糗事百科的作者，内容，好笑数进行匹配。</p>
+</li>
+</ol>
 <p><strong>输出结果</strong></p>
 <blockquote>
 <p>醉卧美人膝↘兔<br>男盆友正在打撸啊撸，于是过去看他，奈何他体位大，占位置太多，遂想挪开他，这货来了一句，你要是能抱起我来，我三个月工资都归你啦～<br>哦哟～老子一听，立马来了精神，活动了一下手关节和舒舒腰，憋着口气，一手搂住他的腰一手从他膝盖下捞过去，双腿一用力腰一使劲，这货噔的一下离地了，顺势把他扔在床上，压了上去，这货一脸不可置信狂喊：你不是人你不是人，老子一百七十斤你咋能抱得起来的，不得，重来，于是经过三番五次试验后，这货终于服了，现在他缩在角落里瑟瑟发抖，你们说这种情况该咋哄[诶<del>][诶</del>][诶~]<br>757</p>
@@ -273,8 +316,12 @@
 </blockquote>
 <h1 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h1><p>学完了基础爬虫，当然就想干点坏事，于是打算提取我的一位基友的所有KDA小于2.0的刀塔比赛记录（来看看这个人到底有多坑)。</p>
 <p>然而，套用糗事百科的代码，才发现事情并没有这么简单，Dotamax网站的个人比赛记录需要登录Max账号才能查看，一番google，了解到可以用Cookies或者模拟登录的方法。</p>
-<p>首先注销账号，再登录，审查Headers里Form Data,</p>
-<p><img src="/images/1.png" alt="Form Data" title="Form Data"></p>
+<p>首先注销账号，再登录，审查Headers里的Form Data</p>
+<p><img src="/images/2019-08-15_1.png" alt="Form Data" title="Form Data"></p>
+<p>额……这都是什么东西，说好的username,passwd字段呢……没办法，继续google，终于找到了另一个<a href="https://zhuanlan.zhihu.com/p/37085139" target="_blank" rel="noopener">大神</a> 的博客，了解了一些关于反爬虫的知识。具体的有点复杂，我也不是特别懂，详情可以参照大神的博客。我这里，就是对着他的代码，用requests库实现了一下(requests库确实比urllib库方便很多)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> requests.exceptions <span class="keyword">import</span> RequestException</span><br><span class="line"><span class="keyword">from</span> urllib.parse <span class="keyword">import</span> urlencode</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">import</span> rsa</span><br><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment">#rsa加密</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">encry</span><span class="params">(message)</span>:</span></span><br><span class="line">    rsa_e = <span class="number">10001</span></span><br><span class="line">    rsa_n = <span class="string">'B81E72A33686A201B0AC009D679750990E3D168670DC6F9452C24'</span> \</span><br><span class="line">            <span class="string">'E5A4C299AC002C6C89C3CB38784AEA95D66B7B3E9CA950EB9EEFB'</span> \</span><br><span class="line">            <span class="string">'4EF61383EDDB67C35727F9CA87EE3238346C66D042B3581217950'</span> \</span><br><span class="line">            <span class="string">'1F472AD4F3BA19E701256FE0435AB856E5C5BEA24A2387153023C'</span> \</span><br><span class="line">            <span class="string">'D4CD43CDA7260FCC1E2E49C14102C253F559F9A45D59DF5004A01'</span> \</span><br><span class="line">            <span class="string">'7B1239448A9A001D276CAD12535DEDE89FFBD57D75BBC9B575530'</span> \</span><br><span class="line">            <span class="string">'DDD1B7FAD46064AD3C640CBD017F58981215B2EE17CBE175C3657'</span> \</span><br><span class="line">            <span class="string">'0C5235902818648577234E70E81133B088164F98E605D0D6E69A6'</span> \</span><br><span class="line">            <span class="string">'095A32A72511E9AC901727B635CE2E8002A7B0EC8D012606903BC'</span> \</span><br><span class="line">            <span class="string">'B825E60C7B6619FFCED4401E693F5EC68AB'</span></span><br><span class="line"></span><br><span class="line">    rsaPublickey  = int (rsa_n,<span class="number">16</span>)</span><br><span class="line">    rsaPrivate=int (str(rsa_e),<span class="number">16</span>)</span><br><span class="line">    key = rsa.PublicKey(rsaPublickey,rsaPrivate)</span><br><span class="line">    message = message.encode()</span><br><span class="line">    passwd  = rsa.encrypt(message,key)</span><br><span class="line">    passwd64  = binascii.b2a_base64(passwd)</span><br><span class="line">    message_encrypt = bytes.decode(passwd64)</span><br><span class="line">    <span class="keyword">return</span> message_encrypt</span><br><span class="line"></span><br><span class="line"><span class="comment">#登录页面</span></span><br><span class="line">header_login =&#123;</span><br><span class="line"><span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'</span>,</span><br><span class="line"><span class="string">'Referer'</span>:<span class="string">'http://www.dotamax.com/accounts/login/'</span>,</span><br><span class="line"><span class="string">'Host'</span>:<span class="string">'www.dotamax.com'</span>,</span><br><span class="line"><span class="string">'Accept'</span>:<span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'</span>,</span><br><span class="line"><span class="string">'Accept-Language'</span>:<span class="string">'zh-CN,zh;q=0.8'</span>,</span><br><span class="line"><span class="string">'Connection'</span>:<span class="string">'keep-alive'</span>,</span><br><span class="line"><span class="string">'Content-Type'</span>:<span class="string">'application/x-www-form-urlencoded'</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取数据的页面</span></span><br><span class="line">header_data = &#123;</span><br><span class="line"><span class="string">'User-Agent'</span>:<span class="string">'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'</span>,</span><br><span class="line"><span class="string">'Referer'</span>:<span class="string">'http://www.dotamax.com/player/match/***/?skill=&amp;ladder=&amp;hero=-1&amp;p='</span>,</span><br><span class="line"><span class="string">'Host'</span>:<span class="string">'www.dotamax.com'</span>,</span><br><span class="line"><span class="string">'Accept'</span>:<span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'</span>,</span><br><span class="line"><span class="string">'Accept-Language'</span>:<span class="string">'zh-CN,zh;q=0.8'</span>,</span><br><span class="line"><span class="string">'Connection'</span>:<span class="string">'keep-alive'</span>,</span><br><span class="line"><span class="string">'Content-Type'</span>:<span class="string">'application/x-www-form-urlencoded'</span>,</span><br><span class="line"><span class="string">'Upgrade-Insecure-Requests'</span>:<span class="string">'1'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">login_url=<span class="string">'http://www.dotamax.com/accounts/login/'</span></span><br><span class="line">data_url=<span class="string">'http://www.dotamax.com/player/match/***/?skill=&amp;ladder=&amp;hero=-1&amp;p='</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#requests库用session保持会话</span></span><br><span class="line">session = requests.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取token</span></span><br><span class="line">response = session.get(login_url,headers = header_login)</span><br><span class="line">content=response.content.decode(<span class="string">"utf-8"</span>)</span><br><span class="line"><span class="comment">#print(html)</span></span><br><span class="line">csrf_pattern = re.compile(<span class="string">'name=\'csrfmiddlewaretoken\' value=\'(.*?)\''</span>)</span><br><span class="line">csrfmiddlewaretoken = re.search(csrf_pattern,content).group(<span class="number">1</span>)</span><br><span class="line"><span class="comment">#print(csrfmiddlewaretoken)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#登录的账号密码</span></span><br><span class="line">phone_num=<span class="string">'***'</span></span><br><span class="line">passw=<span class="string">'***'</span></span><br><span class="line">usern=<span class="string">'***'</span></span><br><span class="line">phoneNumCipherb64 = encry(phone_num)</span><br><span class="line">passwordCipherb64 = encry(passw)</span><br><span class="line">usernameCipherb64 = encry(usern)</span><br><span class="line"></span><br><span class="line"><span class="comment">#构造登陆表单</span></span><br><span class="line">dic_login = &#123;<span class="string">'csrfmiddlewaretoken'</span>:csrfmiddlewaretoken,<span class="string">'phoneNumCipherb64'</span>:phoneNumCipherb64,<span class="string">'usernameCipherb64'</span>:usernameCipherb64,</span><br><span class="line">             <span class="string">'passwordCipherb64'</span>:passwordCipherb64,<span class="string">'account-type'</span>:<span class="string">'1'</span>,<span class="string">'src'</span>:<span class="literal">None</span>&#125;</span><br><span class="line">form_login = urlencode(dic_login).encode(encoding=<span class="string">'UTF8'</span>)</span><br><span class="line"><span class="comment">#构造csrf验证表单</span></span><br><span class="line">dic_csrf =&#123;<span class="string">'csrfmiddlewaretoken'</span>:csrfmiddlewaretoken&#125;</span><br><span class="line">form_csrf = urlencode(dic_csrf).encode(encoding=<span class="string">'UTF8'</span>)</span><br><span class="line"></span><br><span class="line">response = session.post(login_url,data=form_login,headers=header_login)</span><br><span class="line">content = response.content.decode(<span class="string">"utf-8"</span>)</span><br><span class="line"><span class="comment">#print(content)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#将结果存储为csv格式</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'result.csv'</span>, <span class="string">'a'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    writer = csv.writer(f)</span><br><span class="line">    writer.writerow([<span class="string">'英雄'</span>, <span class="string">'比赛id'</span>,<span class="string">'结束时间'</span> <span class="string">'结果'</span>, <span class="string">'KDA'</span>])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">12</span>):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            response = session.post(data_url+str(i),data=form_csrf,headers=header_data)</span><br><span class="line">            content = response.content.decode(<span class="string">"utf-8"</span>).replace(<span class="string">'\n'</span>,<span class="string">''</span>)</span><br><span class="line">            <span class="comment">#print(content)</span></span><br><span class="line">            <span class="comment">#print('success')</span></span><br><span class="line">            pattern = re.compile(<span class="string">'DoNav.*?&lt;img.*?/img&gt;(.*?)&lt;/a&gt;.*?customkey="(.*?)"&gt;.*?fromnow"&gt;(.*?)&lt;/div&gt;.*?important.*?;"&gt;(.*?)&lt;/font&gt;.*?&lt;td&gt;(.*?)&lt;/td&gt;'</span>,re.S)</span><br><span class="line">            items = re.findall(pattern, content)</span><br><span class="line">            <span class="keyword">for</span> item <span class="keyword">in</span> items:</span><br><span class="line">                kda=float(item[<span class="number">4</span>][<span class="number">1</span>:<span class="number">4</span>])</span><br><span class="line">                <span class="keyword">if</span> kda&lt;<span class="number">2.0</span>:</span><br><span class="line">                    print(kda)</span><br><span class="line">                    writer.writerow([item[<span class="number">0</span>],item[<span class="number">1</span>],item[<span class="number">2</span>],item[<span class="number">3</span>],item[<span class="number">4</span>]])</span><br><span class="line">            time.sleep(<span class="number">0.5</span>)</span><br><span class="line">        <span class="keyword">except</span> RequestException:</span><br><span class="line">            print(<span class="string">'Error Occurred'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这样，就可以在本地得到一个result.csv文件，里面全是这个菜鸡的所有KDA小于2的比赛数据。</p>
 
     </div>
 
@@ -292,31 +339,13 @@
             
               <a href="/tags/Python/" rel="tag"># Python</a>
             
+              <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
+            
           </div>
         
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2019/08/14/test/" rel="next" title="test">
-                  <i class="fa fa-chevron-left"></i> test
-                </a>
-              
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/08/14/image-test/" rel="prev" title="image_test">
-                  image_test <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
-        
       </footer>
     
   </div>
@@ -346,10 +375,10 @@
     <div class="sidebar-inner">
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -358,7 +387,7 @@
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">yajha</p>
   <div class="site-description motion-element" itemprop="description"></div>
 </div>
   <nav class="site-state motion-element">
@@ -366,8 +395,25 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
         </a>
       </div>
     
@@ -375,13 +421,19 @@
       
       <div class="site-state-item site-state-tags">
         
+          
+            <a href="/tags/">
+          
+        
         
         
           
         
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">tags</span>
+          
         
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
       </div>
     
   </nav>
@@ -422,11 +474,11 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">yajha</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.3.0</div>
 
         
 
