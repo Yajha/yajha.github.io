@@ -56,12 +56,12 @@
 </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="yajha">
+<meta property="og:title" content="yajha&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="yajha">
+<meta property="og:site_name" content="yajha&#39;s Blog">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yajha">
+<meta name="twitter:title" content="yajha&#39;s Blog">
   <link rel="canonical" href="http://yoursite.com/">
 
 
@@ -76,7 +76,7 @@
   };
 </script>
 
-  <title>yajha</title>
+  <title>yajha's Blog</title>
   
 
 
@@ -125,7 +125,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">yajha</span>
+        <span class="site-title">yajha's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -212,7 +212,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/Spider/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/18/post_2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yajha">
@@ -221,14 +221,118 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yajha">
+      <meta itemprop="name" content="yajha's Blog">
     </span>
       <header class="post-header">
 
         
           <h1 class="post-title" itemprop="name headline">
               
-              <a href="/2019/08/14/Spider/" class="post-title-link" itemprop="url">Python爬虫爬取Dotamax数据</a>
+              <a href="/2019/08/18/post_2/" class="post-title-link" itemprop="url">Numpy和Pytorch中的乘法整理</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-18 19:58:05 / 修改时间：22:10:16" itemprop="dateCreated datePublished" datetime="2019-08-18T19:58:05+08:00">2019-08-18</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Pytorch/" itemprop="url" rel="index"><span itemprop="name">Pytorch</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近写代码涉及到了pytorch中的高维tensor之间的乘法(广播机制)，从头整理了一下一些有意思的点。</p>
+<p>首先，要想理解Numpy中的乘法，必须知道，Numpy中，array数组可以是一维或者高维，matrix矩阵则必须是二维，matrix可以理解为array的一部分。</p>
+<h2 id="关于Numpy中的一维数组"><a href="#关于Numpy中的一维数组" class="headerlink" title="关于Numpy中的一维数组"></a>关于Numpy中的一维数组</h2><p>具体可以总结为</p>
+<blockquote>
+<p>一维数组置于矩阵乘法的左部，被视为一个行向量；<br>一维数组置于矩阵乘法的右部，被视为一个列向量；<br>矩阵乘法运算结束得到的向量仍是一维数组。</p>
+</blockquote>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/18/post_2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/14/post_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yajha">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yajha's Blog">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2019/08/14/post_1/" class="post-title-link" itemprop="url">Python爬虫爬取Dotamax数据</a>
             
           </h1>
         
@@ -255,7 +359,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-15 16:58:35" itemprop="dateModified" datetime="2019-08-15T16:58:35+08:00">2019-08-15</time>
+                <time title="修改时间：2019-08-18 19:59:50" itemprop="dateModified" datetime="2019-08-18T19:59:50+08:00">2019-08-18</time>
               </span>
             
           
@@ -305,7 +409,7 @@
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/08/14/Spider/#more" rel="contents">
+              <a class="btn" href="/2019/08/14/post_1/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -363,7 +467,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -380,7 +484,9 @@
         
           
         
-        <span class="site-state-item-count">1</span>
+          
+        
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -399,7 +505,11 @@
         
           
         
-        <span class="site-state-item-count">2</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
